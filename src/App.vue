@@ -3,7 +3,7 @@
     <VHeader class="header" />
     <section class="main">
       <VNav />
-      <VTodolist class="content" />
+      <router-view class="content" />
     </section>
     <VFooter class="footer" />
   </div>
@@ -12,13 +12,12 @@
 <script>
 import VHeader from './pages/main/VHeader.vue'
 import VNav from './pages/main/VNav.vue'
-import VTodolist from './pages/main/content/VTodolist.vue'
 import VFooter from './pages/main/VFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    VHeader, VNav, VTodolist, VFooter
+    VHeader, VNav, VFooter
   }
 }
 </script>
