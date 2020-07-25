@@ -9,6 +9,10 @@
 * init
 * elementUI
 * 重置样式，stylus混合
+* NavMenu 基本外观及交互
+
+>> 0724
+* 
 
 ```
 
@@ -35,7 +39,6 @@ Vue CLI , git ,
 
 
 ## 已知问题
-
 
 
 ## 致谢

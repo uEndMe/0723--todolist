@@ -1,6 +1,12 @@
 <template>
+  <!-- 
+    * NavMenu 导航菜单组件
+    * 缺陷：
+    * 1. 样式内联,难以覆盖         - !important 覆盖（难以维护）
+    * 2. template css难以选取     - 去掉 scoped
+   -->
   <el-menu
-    default-active="1-4-1"
+    default-active="0"
     class="el-menu-vertical-demo"
     @open="handleOpen"
     @close="handleClose"
@@ -10,7 +16,7 @@
     active-text-color="#fff"
   >
     <!-- 伸缩按钮 -->
-    <el-menu-item index="0">
+    <el-menu-item>
       <el-radio-group
         v-model="isCollapse"
         style="margin-bottom: 20px;"
@@ -22,8 +28,8 @@
     <!-- 标题 -->
     <el-submenu index="1">
       <template slot="title">
-        <i class="el-icon-location"></i>
-        <span slot="title">导航一</span>
+        <i class="el-icon-s-home"></i>
+        <span slot="title">首页</span>
       </template>
       <el-menu-item-group>
         <span slot="title">分组一</span>
@@ -34,28 +40,50 @@
         <el-menu-item index="1-3">选项3</el-menu-item>
       </el-menu-item-group>
       <el-submenu index="1-4">
-        <span slot="title">选项4</span>
+        <template slot="title">选项4</template>
         <el-menu-item index="1-4-1">选项1</el-menu-item>
       </el-submenu>
     </el-submenu>
     <!-- 项目 -->
     <el-menu-item index="2">
-      <i class="el-icon-menu"></i>
-      <span slot="title">导航二</span>
+      <i class="el-icon-s-goods"></i>
+      <span slot="title">商品</span>
     </el-menu-item>
     <!-- 项目 -->
-    <el-menu-item
-      index="3"
-      disabled
-    >
-      <i class="el-icon-document"></i>
-      <span slot="title">导航三</span>
+    <el-menu-item index="3">
+      <i class="el-icon-menu"></i>
+      <span slot="title">分类</span>
     </el-menu-item>
     <!-- 项目 -->
     <el-menu-item index="4">
-      <i class="el-icon-setting"></i>
-      <span slot="title">导航四</span>
+      <i class="el-icon-s-operation"></i>
+      <span slot="title">参数</span>
     </el-menu-item>
+    <!-- 项目 -->
+    <el-menu-item index="5">
+      <i class="el-icon-s-order"></i>
+      <span slot="title">订单</span>
+    </el-menu-item>
+    <!-- 项目 -->
+    <el-menu-item index="6">
+      <i class="el-icon-user-solid"></i>
+      <span slot="title">用户管理</span>
+    </el-menu-item>
+    <!-- 项目 -->
+    <el-menu-item index="7">
+      <i class="el-icon-s-platform"></i>
+      <span slot="title">权限管理</span>
+    </el-menu-item>
+    <!-- 项目 -->
+    <el-submenu index="8">
+      <template slot="title">
+        <i class="el-icon-s-data"></i>
+        <span slot="title">统计数据</span>
+      </template>
+      <el-menu-item index="8-1">柱状图</el-menu-item>
+      <el-menu-item index="8-2">折线图</el-menu-item>
+      <el-menu-item index="8-3">饼图</el-menu-item>
+    </el-submenu>
   </el-menu>
 </template>
 
@@ -64,7 +92,7 @@ export default {
   name: 'VNav',
   data () {
     return {
-      isCollapse: false
+      isCollapse: false,
     };
   },
   methods: {
@@ -78,7 +106,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 .el-menu-vertical-demo
   &:not(.el-menu--collapse)
@@ -88,10 +115,12 @@ export default {
 .el-menu::after
   display none
 
-.el-menu-item:hover
-  background-color #1890ff !important
-  color #fff !important
+.el-menu-item
+  &:hover, &:focus
+    background-color #1890ff !important
+    color #fff !important
 
-.el-menu-item:hover i
-  color #fff !important
+.el-menu-item
+  &:hover i, &:focus i
+    color #fff !important
 </style>
