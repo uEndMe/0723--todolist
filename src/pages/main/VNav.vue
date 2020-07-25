@@ -1,4 +1,5 @@
 <template>
+
   <!-- 
     * NavMenu 导航菜单组件
     * 缺陷：
@@ -6,7 +7,7 @@
     * 2. template css难以选取     - 去掉 scoped
    -->
   <el-menu
-    default-active="0"
+    default-active="1"
     class="el-menu-vertical-demo"
     @open="handleOpen"
     @close="handleClose"
@@ -15,35 +16,17 @@
     text-color="#ffffffa5"
     active-text-color="#fff"
   >
-    <!-- 伸缩按钮 -->
-    <el-menu-item>
-      <el-radio-group
-        v-model="isCollapse"
-        style="margin-bottom: 20px;"
-      >
-        <el-radio-button :label="false">展开</el-radio-button>
-        <el-radio-button :label="true">收起</el-radio-button>
-      </el-radio-group>
+    <h1
+      @click="isCollapse=!isCollapse"
+      alt="todolist"
+      class="h1"
+    >
+    </h1>
+    <!-- 项目 -->
+    <el-menu-item index="1">
+      <i class="el-icon-s-home"></i>
+      <span slot="title">首页</span>
     </el-menu-item>
-    <!-- 标题 -->
-    <el-submenu index="1">
-      <template slot="title">
-        <i class="el-icon-s-home"></i>
-        <span slot="title">首页</span>
-      </template>
-      <el-menu-item-group>
-        <span slot="title">分组一</span>
-        <el-menu-item index="1-1">选项1</el-menu-item>
-        <el-menu-item index="1-2">选项2</el-menu-item>
-      </el-menu-item-group>
-      <el-menu-item-group title="分组2">
-        <el-menu-item index="1-3">选项3</el-menu-item>
-      </el-menu-item-group>
-      <el-submenu index="1-4">
-        <template slot="title">选项4</template>
-        <el-menu-item index="1-4-1">选项1</el-menu-item>
-      </el-submenu>
-    </el-submenu>
     <!-- 项目 -->
     <el-menu-item index="2">
       <i class="el-icon-s-goods"></i>
@@ -85,6 +68,7 @@
       <el-menu-item index="8-3">饼图</el-menu-item>
     </el-submenu>
   </el-menu>
+
 </template>
 
 <script>
@@ -107,10 +91,12 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-.el-menu-vertical-demo
-  &:not(.el-menu--collapse)
-    width 200px
-    min-height 400px
+.h1
+  height 56px
+
+.el-menu-vertical-demo:not(.el-menu--collapse)
+  width 200px
+  min-height 400px
 
 .el-menu::after
   display none
