@@ -1,46 +1,53 @@
 <template>
   <div id="app">
-    <el-container>
-      <el-header>header 菜单栏</el-header>
-      <el-container>
-        <el-aside>aside</el-aside>
-        <el-main>
-          <VTodolist></VTodolist>
-        </el-main>
-      </el-container>
-      <el-footer>footer 状态栏</el-footer>
-    </el-container>
+    <VHeader class="header" />
+    <section class="main">
+      <VNav />
+      <VTodolist class="content" />
+    </section>
+    <VFooter class="footer" />
   </div>
 </template>
 
 <script>
-import VTodolist from './components/VTodolist.vue'
+import VHeader from './pages/main/VHeader.vue'
+import VNav from './pages/main/VNav.vue'
+import VTodolist from './pages/main/content/VTodolist.vue'
+import VFooter from './pages/main/VFooter.vue'
 
 export default {
   name: 'App',
   components: {
-    VTodolist
+    VHeader, VNav, VTodolist, VFooter
   }
 }
 </script>
 
-<style scoped>
-.el-header, .el-footer {
-  background-color: #b3c0d1;
-  color:#333;
-  text-align: center;
-  line-height:60px;
-}
-.el-aside{
-  background-color: #b3c0d1;
-  color:#333;
-  text-align: center;
-  line-height: 200px;
-}
-.el-main{
-  background-color:#e9eef3;
-  color:#333;
-  text-align:center;
-  line-height: 160px;
-}
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+#app
+  height 100%
+  display flex
+  flex-direction column
+  color #333
+
+.header, .footer
+  background-color #dee1e6
+  text-align center
+  height 30px
+  line-height 30px
+  font-size 12px
+
+.header
+  border-bottom 1px solid #dadce0
+
+.footer
+  border-top 1px solid #dadce0
+
+.main
+  background-color #f4f5f5
+  flex 1
+  display flex
+
+.content
+  flex 1
 </style>
