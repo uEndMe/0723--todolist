@@ -1,20 +1,19 @@
 import VLogin from '../pages/login/VLogin'
-import VHome from '../pages/home/VHome'
+import VRoot from '../pages/VRoot'
 
-import HomeHome from '../pages/home/home/HomeHome'
-import HomeProduction from '../pages/home/production/HomeProduction'
-import HomeClass from '../pages/home/class/HomeClass'
+import VHome from '../pages/home/VHome'
+import VProduction from '../pages/production/VProduction'
+import VClass from '../pages/class/VClass'
 
 export default [
-  { path: '/', redirect: '/home' },
   { path: '/login', component: VLogin },
   {
-    path: '/home', component: VHome,
+    path: '/', component: VRoot,
     children: [
-      { path: '/home', redirect: '/home/home' },
-      { path: '/home/home', component: HomeHome },
-      { path: '/home/production', component: HomeProduction },
-      { path: '/home/class', component: HomeClass }
+      { path: '/', redirect: '/home' },
+      { path: '/home', component: VHome },
+      { path: '/production', component: VProduction },
+      { path: '/class', component: VClass }
     ]
   }
 ]

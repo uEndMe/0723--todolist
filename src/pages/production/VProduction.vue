@@ -1,12 +1,12 @@
 <template>
   <div>
-    home
+    production
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomeHome',
+  name: 'VProduction',
 }
 </script>
 

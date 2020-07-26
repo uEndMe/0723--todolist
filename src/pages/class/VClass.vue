@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'HomeClass',
+  name: 'VClass',
 }
 </script>
 

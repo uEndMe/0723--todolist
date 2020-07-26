@@ -25,49 +25,49 @@
     >
     </h1>
     <!-- 项目 -->
-    <el-menu-item index="/home/home">
+    <el-menu-item index="/home">
       <i class="el-icon-s-home"></i>
       <span slot="title">首页</span>
     </el-menu-item>
     <!-- 项目 -->
-    <el-menu-item index="/home/production">
+    <el-menu-item index="/production">
       <i class="el-icon-s-goods"></i>
       <span slot="title">商品</span>
     </el-menu-item>
     <!-- 项目 -->
-    <el-menu-item index="/home/class">
+    <el-menu-item index="/class">
       <i class="el-icon-menu"></i>
       <span slot="title">分类</span>
     </el-menu-item>
     <!-- 项目 -->
-    <el-menu-item index="/home/param">
+    <el-menu-item index="/param">
       <i class="el-icon-s-operation"></i>
       <span slot="title">参数</span>
     </el-menu-item>
     <!-- 项目 -->
-    <el-menu-item index="/home/order">
+    <el-menu-item index="/order">
       <i class="el-icon-s-order"></i>
       <span slot="title">订单</span>
     </el-menu-item>
     <!-- 项目 -->
-    <el-menu-item index="/home/users">
+    <el-menu-item index="/users">
       <i class="el-icon-user-solid"></i>
       <span slot="title">用户管理</span>
     </el-menu-item>
     <!-- 项目 -->
-    <el-menu-item index="/home/contral">
+    <el-menu-item index="/contral">
       <i class="el-icon-s-platform"></i>
       <span slot="title">权限管理</span>
     </el-menu-item>
     <!-- 项目 -->
-    <el-submenu index="/home/info">
+    <el-submenu index="/info">
       <template slot="title">
         <i class="el-icon-s-data"></i>
         <span slot="title">统计数据</span>
       </template>
-      <el-menu-item index="/home/info">柱状图</el-menu-item>
-      <el-menu-item index="/home/info">折线图</el-menu-item>
-      <el-menu-item index="/home/info">饼图</el-menu-item>
+      <el-menu-item index="/info">柱状图</el-menu-item>
+      <el-menu-item index="/info">折线图</el-menu-item>
+      <el-menu-item index="/info">饼图</el-menu-item>
     </el-submenu>
   </el-menu>
 

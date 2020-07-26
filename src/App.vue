@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <router-view class="page" />
-  </div>
+  <router-view id="app" />
 </template>
 
 <script>
@@ -13,6 +11,6 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-#app, .page
+#app
   height 100%
 </style>
