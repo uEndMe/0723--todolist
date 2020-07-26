@@ -20,6 +20,8 @@
    border: 0;
    font-size: 100%;
    font-weight: normal;
+   /* element-ui 专用字体 */
+   font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
    vertical-align: baseline;
  }
  
@@ -95,4 +97,11 @@
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
+ }
+
+ /*清除浮动*/
+ .clearfix:after{
+  content: '';
+  display: block;
+  clear: both;
  }
