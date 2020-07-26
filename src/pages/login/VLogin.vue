@@ -1,18 +1,17 @@
 <template>
-  <div id="app">
-    <router-view class="page" />
+  <div class="login">
+    login
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-  components: {}
+  name: "VLogin"
 }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-#app, .page
+.login
   height 100%
+  background #fafafa
 </style>
