@@ -52,10 +52,16 @@
         <div class="formEmpty"></div>
         <div class="formMisc">
           <el-checkbox v-model="savePwd">自动登录</el-checkbox>
-          <el-link
-            :underline="false"
-            type="primary"
-          >忘记密码</el-link>
+          <el-dropdown>
+            <span class="el-dropdown-link">
+              更多<i class="el-icon-arrow-down el-icon--right"></i>
+            </span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item>手机登录</el-dropdown-item>
+              <el-dropdown-item>忘记密码</el-dropdown-item>
+              <el-dropdown-item>注册账号</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
         </div>
         <el-button
           type="primary"
@@ -124,6 +130,13 @@ export default {
 .formMisc
   display flex
   justify-content space-between
+
+.el-dropdown-link
+  cursor pointer
+  color #409EFF
+
+.el-icon-arrow-down
+  font-size 12px
 
 .submit
   width 100%
