@@ -25,6 +25,9 @@
 * login 表单校验
 * element reset 优化全局UI
 * login  重构组件
+* router 修复重复导航
+
+
 ```
 
 * 待办

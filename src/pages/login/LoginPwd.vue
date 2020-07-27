@@ -39,7 +39,10 @@
 
     <!-- 其他 -->
     <div class="formMisc">
-      <el-checkbox v-model="savePwd">自动登录</el-checkbox>
+      <el-checkbox
+        v-model="savePwd"
+        @change="autoWrite"
+      >自动登录</el-checkbox>
       <div>
         <el-link :underline="false">忘记密码</el-link>
         <el-link
@@ -73,7 +76,7 @@ export default {
       rules: {
         user: [
           { required: true, message: '请输入账号' },
-          { min: 6, max: 16, message: '长度在 6 到 16 个字符' },
+          { min: 4, max: 16, message: '长度在 4 到 16 个字符' },
           { pattern: /^[0-9a-zA-Z\u4e00-\u9fa5]*$/, message: '只能由英文、数字、中文组成' },
         ],
         pwd: [
@@ -85,6 +88,13 @@ export default {
     }
   },
   methods: {
+    autoWrite () {
+      const { info } = this
+      if (info.user === '' && info.pwd === '') {
+        info.user = 'admin'
+        info.pwd = '123456'
+      }
+    }
   }
 }
 </script>
