@@ -24,7 +24,7 @@
 * login 输入限制
 * login 表单校验
 * element reset 优化全局UI
-
+* login  重构组件
 ```
 
 * 待办

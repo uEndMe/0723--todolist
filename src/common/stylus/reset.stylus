@@ -1,14 +1,25 @@
 
-// 表单优化
+// form 布局优化
 .el-form-item__error
   line-height 1.5715
   font-size 14px
-
-.el-form-item--small .el-form-item__error
   padding-top 0px
 
-.el-form-item--mini.el-form-item, .el-form-item--small.el-form-item
+.el-form-item
   margin-bottom 22px
 
   &:last-child
     margin-bottom 0
+
+.el-tabs__header
+  margin 40px 40px 0
+
+// input 交互反馈
+.el-input.is-active .el-input__inner, .el-input__inner:focus
+  outline 0
+  border-color #40af f
+  box-shadow 0 0 0 2px rgba(24, 144, 255, 0.2)
+
+.el-form-item.is-error .el-input__inner, .el-form-item.is-error .el-input__inner:focus, .el-form-item.is-error .el-textarea__inner, .el-form-item.is-error .el-textarea__inner:focus, .el-message-box__input input.invalid, .el-message-box__input input.invalid:focus
+  border-color #ff7875
+  box-shadow 0 0 0 2px rgba(255, 77, 79, 0.2)
