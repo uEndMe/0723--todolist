@@ -1,4 +1,5 @@
 const
+  test = () => import('@pages/test'),
   VLogin = () => import('@pages/login/VLogin'),
   VRoot = () => import('@pages/VRoot'),
 
@@ -17,5 +18,6 @@ export default [
       { path: '/production', component: VProduction },
       { path: '/class', component: VClass }
     ]
-  }
+  },
+  { path: '/test', component: test }
 ]

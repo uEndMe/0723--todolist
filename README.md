@@ -18,6 +18,12 @@
 * router 重构路由关系，二级路由搭建
 * login 基本架构
 
+>> 0727
+* router 懒加载
+* webpack 路径别名
+* login 输入限制
+* login 表单校验
+
 
 ```
 
@@ -28,6 +34,14 @@
 login 手机登录分离，注册页面 - 使用store 条件渲染
 表单验证，模拟请求
 
+
+优化ui  hover focus 交互，颜色 
+    line-height: 1.5715;font-size: 14px;
+
+
+
+
+未登录，无法访问私有资源
 
 ```
 
