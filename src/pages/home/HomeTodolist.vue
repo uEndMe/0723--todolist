@@ -1,19 +1,13 @@
 <template>
   <div>
     <VTitle />
-    <el-page-header
-      @back="goBack"
-      class="title"
-      content="详情页面"
-    >
-    </el-page-header>
-
     <el-table
       ref="multipleTable"
       :data="tableData"
       tooltip-effect="dark"
-      style="width: 100%"
       @selection-change="handleSelectionChange"
+      size="large"
+      class="table"
     >
       <el-table-column
         type="selection"
@@ -39,10 +33,6 @@
       >
       </el-table-column>
     </el-table>
-    <div style="margin-top: 20px">
-      <el-button @click="toggleSelection([tableData[1], tableData[2]])">切换第二、第三行的选中状态</el-button>
-      <el-button @click="toggleSelection()">取消选择</el-button>
-    </div>
   </div>
 
 </template>
@@ -105,6 +95,9 @@ export default {
 </script> 
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-.title
-  padding 20px
+.table
+  margin 24px
+  padding 24px
+  width auto
+  border-radius 4px
 </style>

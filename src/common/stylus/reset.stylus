@@ -23,3 +23,7 @@
 .el-form-item.is-error .el-input__inner, .el-form-item.is-error .el-input__inner:focus, .el-form-item.is-error .el-textarea__inner, .el-form-item.is-error .el-textarea__inner:focus, .el-message-box__input input.invalid, .el-message-box__input input.invalid:focus
   border-color #ff7875
   box-shadow 0 0 0 2px rgba(255, 77, 79, 0.2)
+
+// title 面包屑导航 优化
+.el-breadcrumb__inner a, .el-breadcrumb__inner.is-link
+  font-weight 400

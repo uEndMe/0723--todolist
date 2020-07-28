@@ -1,11 +1,11 @@
 <template>
   <div class="root">
     <VHeader :class="['header',{headerOff}]" />
+    <VFooter :class="['footer',{footerOff}]" />
     <section class="main">
       <VNav :class="['aside',{asideOff}]" />
       <router-view class="content" />
     </section>
-    <VFooter :class="['footer',{footerOff}]" />
   </div>
 </template>
 
@@ -57,6 +57,7 @@ export default {
   color #333
 
 .header, .footer
+  z-index 3
   position fixed
   width 100%
   height 30px
@@ -70,7 +71,7 @@ export default {
   top 0
   border-bottom 1px solid #dadce0
 
-  &:not(.headerOff)+.main
+  &:not(.headerOff)~.main
     box-sizing border-box
     padding-top 31px
 
@@ -82,7 +83,7 @@ export default {
   bottom 0
   border-top 1px solid #dadce0
 
-  &:not(.headerOff)+.main
+  &:not(.footerOff)+.main
     box-sizing border-box
     padding-bottom 31px
 
@@ -97,10 +98,8 @@ export default {
 
 .content
   flex 1
-  padding 48px
 
 .aside, .content
-  height 100%
   overflow-y auto
   overflow-x hidden
 
