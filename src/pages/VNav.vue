@@ -134,7 +134,7 @@ export default {
 .h1
   height 56px
 
-.el-menu-vertical-demo:not(.el-menu--collapse)
+.el-menu-vertical-demo:not(.el-menu--collapse, .asideOff)
   width 200px
 
 .el-menu::after

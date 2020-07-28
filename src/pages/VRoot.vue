@@ -1,11 +1,11 @@
 <template>
   <div class="root">
-    <VHeader class="header" />
+    <VHeader :class="['header',{headerOff}]" />
     <section class="main">
-      <VNav class="aside" />
+      <VNav :class="['aside',{asideOff}]" />
       <router-view class="content" />
     </section>
-    <VFooter class="footer" />
+    <VFooter :class="['footer',{footerOff}]" />
   </div>
 </template>
 
@@ -18,6 +18,32 @@ export default {
   name: 'VRoot',
   components: {
     VHeader, VNav, VFooter
+  },
+  data () {
+    return {
+      headerOff: true,
+      footerOff: true,
+      asideOff: false
+    }
+  },
+  created () {
+    window.addEventListener('keyup', this.tog)
+  },
+  destroyed () {
+    window.removeEventListener('keyup', this.tog)
+  },
+  methods: {
+    tog ({ key }) {
+      const temp = {
+        t: 'headerOff',
+        l: 'asideOff',
+        b: 'footerOff',
+        f: 'all'
+      }[key]
+      if (!temp) return
+      if (temp === 'all') return this.headerOff = this.footerOff = this.asideOff = !this.asideOff
+      this[temp] = !this[temp]
+    }
   }
 }
 </script>
@@ -32,6 +58,7 @@ export default {
   position fixed
   width 100%
   height 30px
+  overflow hidden
   line-height 30px
   font-size 12px
   text-align center
@@ -41,14 +68,28 @@ export default {
   top 0
   border-bottom 1px solid #dadce0
 
+  &:not(.headerOff)+.main
+    box-sizing border-box
+    padding-top 31px
+
+.headerOff
+  height 0
+  border 0
+
 .footer
   bottom 0
   border-top 1px solid #dadce0
 
+  &:not(.headerOff)+.main
+    box-sizing border-box
+    padding-bottom 31px
+
+.footerOff
+  height 0
+  border 0
+
 .main
-  box-sizing border-box
   height 100%
-  padding 31px 0
   display flex
   background-color #f4f5f5
 
@@ -59,4 +100,8 @@ export default {
   height 100%
   overflow-y auto
   overflow-x hidden
+
+.asideOff
+  width 0
+  border 0
 </style>

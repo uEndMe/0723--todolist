@@ -1,5 +1,5 @@
 const
-  test = () => import('@pages/test'),
+  test = () => import('@pages/test/test'),
   VLogin = () => import('@pages/login/VLogin'),
   VRoot = () => import('@pages/VRoot'),
 
