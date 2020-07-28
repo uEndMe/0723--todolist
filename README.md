@@ -33,6 +33,8 @@
 * i       log       测试日志(无内容)
 * i       home      T/L/B/F快捷键
 * debug   home      导航菜单折叠不流畅
+* perfect home      T/L/B/F快捷键,仅在body聚焦时触发
+
 ```
 
 * 待办
