@@ -28,8 +28,7 @@
 
 >> 0728
 * debug   router 修复重复导航
-* rebuild home 重构布局 （添加更多项）重构
-* rebuild home 重构布局
+* rebuild home 重构布局及相关路由
 
 
 ```
@@ -41,7 +40,7 @@
 
 手写组件
 
-表单验证，模拟请求
+模拟请求
 
 
 优化ui  hover focus 交互，颜色 
