@@ -2,7 +2,7 @@
   <div class="root">
     <VHeader class="header" />
     <section class="main">
-      <VNav />
+      <VNav class="aside" />
       <router-view class="content" />
     </section>
     <VFooter class="footer" />
@@ -24,29 +24,39 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 .root
+  overflow hidden
   height 100%
-  display flex
-  flex-direction column
   color #333
 
 .header, .footer
-  background-color #dee1e6
-  text-align center
+  position fixed
+  width 100%
   height 30px
   line-height 30px
   font-size 12px
+  text-align center
+  background-color #dee1e6
 
 .header
+  top 0
   border-bottom 1px solid #dadce0
 
 .footer
+  bottom 0
   border-top 1px solid #dadce0
 
 .main
-  background-color #f4f5f5
-  flex 1
+  box-sizing border-box
+  height 100%
+  padding 31px 0
   display flex
+  background-color #f4f5f5
 
 .content
   flex 1
+
+.aside, .content
+  height 100%
+  overflow-y auto
+  overflow-x hidden
 </style>

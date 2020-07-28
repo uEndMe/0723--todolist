@@ -15,7 +15,7 @@
     :collapse="isCollapse"
     background-color="#001529"
     text-color="#ffffffa5"
-    active-text-color="#fff"
+    active-text-color="#1890ff"
   >
 
     <h1
@@ -24,51 +24,86 @@
       class="h1"
     >
     </h1>
-    <!-- 项目 -->
-    <el-menu-item index="/home">
-      <i class="el-icon-s-home"></i>
-      <span slot="title">首页</span>
-    </el-menu-item>
-    <!-- 项目 -->
+    <!-- 首页 -->
+    <el-submenu index="/home">
+      <template slot="title">
+        <i class="el-icon-s-home"></i>
+        <span slot="title">首页</span>
+      </template>
+      <el-menu-item index="/home">
+        <i class="el-icon-user-solid"></i>
+        <span slot="title">我的</span>
+      </el-menu-item>
+      <!-- 案例 -->
+      <el-submenu index="/home/todolist">
+        <template slot="title">
+          <i class="el-icon-s-home"></i>
+          <span slot="title">案例</span>
+        </template>
+        <el-menu-item index="/home/todolist">
+          <i class="el-icon-star-on"></i>
+          <span slot="title">todolist</span>
+        </el-menu-item>
+        <el-menu-item index="/home/vuex">
+          <i class="el-icon-star-on"></i>
+          <span slot="title">vuex</span>
+        </el-menu-item>
+      </el-submenu>
+    </el-submenu>
+    <!-- 商品 -->
     <el-menu-item index="/production">
       <i class="el-icon-s-goods"></i>
       <span slot="title">商品</span>
     </el-menu-item>
-    <!-- 项目 -->
+    <!-- 分类 -->
     <el-menu-item index="/class">
       <i class="el-icon-menu"></i>
       <span slot="title">分类</span>
     </el-menu-item>
-    <!-- 项目 -->
+    <!-- 参数 -->
     <el-menu-item index="/param">
       <i class="el-icon-s-operation"></i>
       <span slot="title">参数</span>
     </el-menu-item>
-    <!-- 项目 -->
+    <!-- 订单 -->
     <el-menu-item index="/order">
       <i class="el-icon-s-order"></i>
       <span slot="title">订单</span>
     </el-menu-item>
-    <!-- 项目 -->
+    <!-- 用户管理 -->
     <el-menu-item index="/users">
-      <i class="el-icon-user-solid"></i>
+      <i class="el-icon-s-custom"></i>
       <span slot="title">用户管理</span>
     </el-menu-item>
-    <!-- 项目 -->
+    <!-- 权限管理 -->
     <el-menu-item index="/contral">
       <i class="el-icon-s-platform"></i>
       <span slot="title">权限管理</span>
     </el-menu-item>
-    <!-- 项目 -->
+    <!-- 统计设置 -->
     <el-submenu index="/info">
       <template slot="title">
         <i class="el-icon-s-data"></i>
         <span slot="title">统计数据</span>
       </template>
-      <el-menu-item index="/info">柱状图</el-menu-item>
-      <el-menu-item index="/info">折线图</el-menu-item>
-      <el-menu-item index="/info">饼图</el-menu-item>
+      <el-menu-item index="/info">
+        <i class="el-icon-s-data"></i>
+        <span slot="title">柱状图</span>
+      </el-menu-item>
+      <el-menu-item index="/info">
+        <i class="el-icon-s-marketing"></i>
+        <span slot="title">折线图</span>
+      </el-menu-item>
+      <el-menu-item index="/info">
+        <i class="el-icon-more"></i>
+        <span slot="title">其他</span>
+      </el-menu-item>
     </el-submenu>
+    <!-- 设置 -->
+    <el-menu-item index="/setting">
+      <i class="el-icon-s-tools"></i>
+      <span slot="title">设置</span>
+    </el-menu-item>
   </el-menu>
 
 </template>
@@ -93,12 +128,14 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
+::-webkit-scrollbar-thumb
+  background-color transparent
+
 .h1
   height 56px
 
 .el-menu-vertical-demo:not(.el-menu--collapse)
   width 200px
-  min-height 400px
 
 .el-menu::after
   display none

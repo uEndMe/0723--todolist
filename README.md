@@ -7,25 +7,29 @@
 ```
 >> 0724
 * init
-* elementUI
-* 重置样式，stylus混合
+* i       elementUI
+* i       css 重置样式，stylus混合
 
 >> 0725
-* NavMenu 基本外观及交互
-* router 基本架构
+* i       NavMenu 基本外观及交互
+* i       router 基本路由
 
 >> 0726
-* router 重构路由关系，二级路由搭建
-* login 基本架构
+* rebuild router 路由关系，二级路由搭建
+* i       login 基本架构
 
 >> 0727
-* router 懒加载
-* webpack 路径别名
-* login 输入限制
-* login 表单校验
-* element reset 优化全局UI
-* login  重构组件
-* router 修复重复导航
+* i       router 懒加载
+* set     webpack 路径别名
+* i       login 输入限制
+* i       login 表单校验
+* i       element 全局UI预设
+* rebuild login  重构组件，
+
+>> 0728
+* debug   router 修复重复导航
+* rebuild home 重构布局 （添加更多项）重构
+* rebuild home 重构布局
 
 
 ```
@@ -33,18 +37,16 @@
 * 待办
 
 ```
-路由跳转到本身，的报错
-login 手机登录分离，注册页面 - 使用store 条件渲染
+注册页面
+
+手写组件
+
 表单验证，模拟请求
 
 
 优化ui  hover focus 交互，颜色 
     line-height: 1.5715;font-size: 14px;
 
-
-
-
-未登录，无法访问私有资源
 
 ```
 

@@ -4,6 +4,7 @@ const
   VRoot = () => import('@pages/VRoot'),
 
   VHome = () => import('@pages/home/VHome'),
+  HomeTodolist = () => import('@pages/home/HomeTodolist'),
   VProduction = () => import('@pages/production/VProduction'),
   VClass = () => import('@pages/class/VClass')
 
@@ -14,9 +15,11 @@ export default [
     path: '/', component: VRoot,
     children: [
       { path: '/', redirect: '/home' },
-      { path: '/home', component: VHome, },
+      { path: '/home', component: VHome },
+      { path: '/home/todolist', component: HomeTodolist },
+      { path: '/home/vuex', component: HomeTodolist },
       { path: '/production', component: VProduction },
-      { path: '/class', component: VClass }
+      { path: '/class', component: VClass },
     ]
   },
   { path: '/test', component: test }
