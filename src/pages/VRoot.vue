@@ -97,6 +97,7 @@ export default {
 
 .content
   flex 1
+  padding 48px
 
 .aside, .content
   height 100%

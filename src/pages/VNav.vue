@@ -23,6 +23,7 @@
       alt="todolist"
       class="h1"
     >
+      <i :class="'el-icon-arrow-' + (isCollapse ? 'right' : 'left')"></i>
     </h1>
     <!-- 首页 -->
     <el-submenu index="/home">
@@ -113,7 +114,7 @@ export default {
   name: 'VNav',
   data () {
     return {
-      isCollapse: false,
+      isCollapse: true,
     };
   },
   methods: {
@@ -138,12 +139,20 @@ export default {
 
 .h1
   height 56px
+  line-height 56px
+  font-size 14px
+  text-align center
+  cursor pointer
+  color rgba(255, 255, 255, 0.647)
 
-.el-menu-vertical-demo:not(.el-menu--collapse, .asideOff)
-  width 200px
+.el-menu-vertical-demo
+  box-shadow 0 2px 12px 0 rgba(0, 0, 0, 0.5)
 
-.el-menu::after
-  display none
+.el-menu
+  border 0
+
+  &::after
+    display none
 
 .el-menu-item
   &:hover, &:focus

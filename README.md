@@ -35,6 +35,7 @@
 * debug   home      导航菜单折叠不流畅
 * perfect home      T/L/B/F快捷键,仅在body聚焦时触发
 * debug   home      快捷键功能不生效
+* update  nav       添加了折叠按钮图标      
 
 ```
 

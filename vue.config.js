@@ -10,7 +10,8 @@ module.exports = {
       extensions: ['.js', '.vue', '.json'], // 免写
       alias: {
         '@': resolve('src'), 								// 简写
-        '@pages': resolve('src/pages')
+        '@pages': resolve('src/pages'),
+        '@components': resolve('src/components')
       }
     }
   },

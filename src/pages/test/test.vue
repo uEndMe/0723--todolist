@@ -4,7 +4,6 @@
     <Va />
     <Vb />
     <div class="testbox">
-      <navv />
       <div class="testa">sss</div>
     </div>
     <navv />
@@ -16,7 +15,6 @@
 <script>
 import Va from './Va'
 import Vb from './Vb'
-import navv from '@pages/VNav'
 export default {
   name: 'test',
   data () {
@@ -24,7 +22,7 @@ export default {
       isCollapse: true
     }
   },
-  components: { Va, Vb, navv },
+  components: { Va, Vb },
   methods: {
     test () {
       console.log('test')
