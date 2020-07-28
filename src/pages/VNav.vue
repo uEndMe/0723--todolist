@@ -127,6 +127,11 @@ export default {
 }
 </script>
 
+<style lang="stylus" rel="stylesheet/stylus" >
+.el-menu-vertical-demo:not(.el-menu--collapse)
+  width 200px
+</style>
+
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 ::-webkit-scrollbar-thumb
   background-color transparent
