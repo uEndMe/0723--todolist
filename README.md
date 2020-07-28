@@ -8,28 +8,29 @@
 >> 0724
 * init
 * i       elementUI
-* i       css 重置样式，stylus混合
+* i       css       重置样式，stylus混合
 
 >> 0725
-* i       NavMenu 基本外观及交互
-* i       router 基本路由
+* i       NavMenu   基本外观及交互
+* i       router    基本路由
 
 >> 0726
-* rebuild router 路由关系，二级路由搭建
-* i       login 基本架构
+* rebuild router    路由关系，二级路由搭建
+* i       login     基本架构
 
 >> 0727
-* i       router 懒加载
-* set     webpack 路径别名
-* i       login 输入限制
-* i       login 表单校验
-* i       element 全局UI预设
-* rebuild login  重构组件，
+* i       router    懒加载
+* set     webpack   路径别名
+* i       login     输入限制
+* i       login     表单校验
+* i       element   全局UI预设
+* rebuild login     重构组件，
 
 >> 0728
-* debug   router 修复重复导航
-* rebuild home 重构布局及相关路由
-
+* debug   router    修复重复导航
+* rebuild home      重构布局及相关路由
+* update  doc       更新文档
+* i       log       测试日志(无内容)
 
 ```
 
