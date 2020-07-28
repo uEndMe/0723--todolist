@@ -33,16 +33,16 @@ export default {
     window.removeEventListener('keyup', this.tog)
   },
   methods: {
-    tog ({ code }) {
+    tog ({ key }) {
       if (document.activeElement.nodeName !== 'BODY')
         return
-      if (code === 'f')
+      if (key === 'f')
         return this.headerOff = this.footerOff = this.asideOff = !this.asideOff
-      if (code === 't')
+      if (key === 't')
         return this.headerOff = !this.headerOff
-      if (code === 'l')
+      if (key === 'l')
         return this.asideOff = !this.asideOff
-      if (code === 'b')
+      if (key === 'b')
         return this.footerOff = !this.footerOff
     }
   }
