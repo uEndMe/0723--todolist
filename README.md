@@ -33,12 +33,13 @@
 * i       log       测试日志(无内容)
 * i       home      T/L/B/F快捷键
 * debug   home      导航菜单折叠不流畅
-* perfect home      T/L/B/F快捷键,仅在body聚焦时触发
+* update  home      T/L/B/F快捷键,仅在body聚焦时触发
 * debug   home      快捷键功能不生效
 * update  nav       添加了折叠按钮图标      
 
 >> 0729
 * i       todolist  公共布局
+* update  title     页头改为单行
 
 
 ```

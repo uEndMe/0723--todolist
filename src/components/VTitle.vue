@@ -1,16 +1,36 @@
 <template>
 
-  <div class="title">
-    <el-breadcrumb
-      separator="/"
-      class="breadcrumb"
-    >
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>案例</el-breadcrumb-item>
-      <el-breadcrumb-item>todolist</el-breadcrumb-item>
-    </el-breadcrumb>
-    <h2 class='h2'>todolist</h2>
-  </div>
+  <header class="title">
+    <div class="left">
+      <h2 class='h2'>todolist</h2>
+      <el-breadcrumb
+        separator="/"
+        class="breadcrumb"
+      >
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item>案例</el-breadcrumb-item>
+        <el-breadcrumb-item>todolist</el-breadcrumb-item>
+      </el-breadcrumb>
+    </div>
+    <div class="right">
+      <el-breadcrumb-item :to="{ path: '/' }">
+        <i class="el-icon-setting"></i>
+        设置
+      </el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/' }">
+        <i class="el-icon-bell"></i>
+        消息
+      </el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/' }">
+        <i class="el-icon-warning-outline"></i>
+        帮助
+      </el-breadcrumb-item>
+      <el-avatar
+        class="avatar"
+        src="https://avatars3.githubusercontent.com/u/7843281?s=40&v=4"
+      ></el-avatar>
+    </div>
+  </header>
 </template>
 
 
@@ -28,24 +48,34 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
 .title
-  padding 24px 24px 12px
-  background #fff
+  display flex
+  justify-content space-between
+  padding 8px 24px
   border-bottom 1px solid #d7dae2
+  background #fff
+
+.left, .right
+  display flex
+  align-items center
+  font-size 14px
 
 .breadcrumb
   line-height 22px
   font-weight 400
-  opacity 0.6
 
 .h2
-  margin-top 8px
+  margin-block-start 0
+  margin-block-end 0
   margin-right 12px
-  margin-bottom 0
   color rgba(0, 0, 0, 0.85)
+  vertical-align middle
   font-weight 600
-  font-size 20px
-  line-height 32px
-  overflow hidden
-  white-space nowrap
-  text-overflow ellipsis
+  font-size 22px
+
+.avatar
+  width 32px
+  height 32px
+
+.setting
+  color rgba(0, 0, 0, 0.45)
 </style>

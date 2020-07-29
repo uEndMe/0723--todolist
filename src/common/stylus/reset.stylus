@@ -25,5 +25,14 @@
   box-shadow 0 0 0 2px rgba(255, 77, 79, 0.2)
 
 // title 面包屑导航 优化
+.el-breadcrumb__inner
+  color rgba(0, 0, 0, 0.45)
+  cursor default
+
 .el-breadcrumb__inner a, .el-breadcrumb__inner.is-link
   font-weight 400
+  color rgba(0, 0, 0, 0.45)
+
+.el-breadcrumb__item:last-child .el-breadcrumb__inner
+  color rgba(0, 0, 0, 0.45)
+  cursor default
