@@ -100,11 +100,6 @@
         <span slot="title">其他</span>
       </el-menu-item>
     </el-submenu>
-    <!-- 设置 -->
-    <el-menu-item index="/setting">
-      <i class="el-icon-s-tools"></i>
-      <span slot="title">设置</span>
-    </el-menu-item>
   </el-menu>
 
 </template>

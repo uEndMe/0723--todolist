@@ -40,7 +40,7 @@
 >> 0729
 * i       todolist  公共布局
 * update  title     页头改为单行
-
+* 1.1.1 update nav 删除设置
 
 ```
 
