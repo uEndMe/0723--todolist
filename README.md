@@ -35,12 +35,13 @@
 * debug   home      导航菜单折叠不流畅
 * update  home      T/L/B/F快捷键,仅在body聚焦时触发
 * debug   home      快捷键功能不生效
-* update  nav       添加了折叠按钮图标      
+* update  nav       添加了折叠按钮图标     
 
 >> 0729
 * i       todolist  公共布局
 * update  title     页头改为单行
 * 1.1.1 update nav 删除设置
+* 1.1.2 debug title 按钮用错标签
 
 ```
 

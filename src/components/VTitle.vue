@@ -13,18 +13,27 @@
       </el-breadcrumb>
     </div>
     <div class="right">
-      <el-breadcrumb-item :to="{ path: '/' }">
+      <el-link
+        :underline="false"
+        class="button"
+      >
         <i class="el-icon-setting"></i>
         设置
-      </el-breadcrumb-item>
-      <el-breadcrumb-item :to="{ path: '/' }">
+      </el-link>
+      <el-link
+        :underline="false"
+        class="button"
+      >
         <i class="el-icon-bell"></i>
         消息
-      </el-breadcrumb-item>
-      <el-breadcrumb-item :to="{ path: '/' }">
+      </el-link>
+      <el-link
+        :underline="false"
+        class="button"
+      >
         <i class="el-icon-warning-outline"></i>
         帮助
-      </el-breadcrumb-item>
+      </el-link>
       <el-avatar
         class="avatar"
         src="https://avatars3.githubusercontent.com/u/7843281?s=40&v=4"
@@ -76,6 +85,7 @@ export default {
   width 32px
   height 32px
 
-.setting
+.button
+  margin-right 16px
   color rgba(0, 0, 0, 0.45)
 </style>
