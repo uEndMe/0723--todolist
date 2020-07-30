@@ -100,6 +100,7 @@ export default {
   flex 1
 
 .aside, .content
+  height 100%
   overflow-y auto
   overflow-x hidden
 

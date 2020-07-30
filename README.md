@@ -40,17 +40,18 @@
 >> 0729
 * i       todolist  公共布局
 * update  title     页头改为单行
-* 1.1.1 update nav 删除设置
-* 1.1.2 debug title 按钮用错标签
+* update  nav       删除设置
+* debug   title     按钮用错标签
+* i       todolist  基本布局
 
 ```
 
 * 待办
 
 ```
+优化 stylus 结构
+添加 别名
 
-nav 不流畅
-快捷键 应当在一些情况下禁用
 注册页面
 
 手写组件
