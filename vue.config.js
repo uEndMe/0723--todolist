@@ -10,8 +10,15 @@ module.exports = {
       extensions: ['.js', '.vue', '.json'], // 免写
       alias: {
         '@': resolve('src'), 								// 简写
+        '@api': resolve('src/api'),
+        '@assets': resolve('src/assets'),
+        '@common': resolve('src/common'),
+        '@components': resolve('src/components'),
+        '@filter': resolve('src/filter'),
+        '@mock': resolve('src/mock'),
         '@pages': resolve('src/pages'),
-        '@components': resolve('src/components')
+        '@router': resolve('src/router'),
+        '@store': resolve('src/store'),
       }
     }
   },
