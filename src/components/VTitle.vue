@@ -36,7 +36,7 @@
       </el-link>
       <el-avatar
         class="avatar"
-        src="https://avatars3.githubusercontent.com/u/7843281?s=40&v=4"
+        src="/favicon.ico"
       ></el-avatar>
     </div>
   </header>
