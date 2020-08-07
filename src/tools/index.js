@@ -1,4 +1,3 @@
-let tools = {}
 
 /**
  * 防抖
@@ -7,7 +6,7 @@ let tools = {}
  * @param {number} delay 延时时间
  * @return function
  */
-tools.debounce = function (cb, delay) {
+export let debounce = function (cb, delay) {
   let id = null
   return function (...rest) {
     clearTimeout(id)
@@ -24,17 +23,14 @@ tools.debounce = function (cb, delay) {
  * @param {number} interval 间隔时间
  * @return function
  */
-tools.throttle = function (cb, interval) {
+export let throttle = function (cb, interval) {
   let state = true
   return function (...rest) {
     if (!state) return
     state = false
+    cb.call(this, ...rest)
     setTimeout(() => {
-      cb.call(this, ...rest)
       state = true
     }, interval)
   }
 }
-
-
-export default tools

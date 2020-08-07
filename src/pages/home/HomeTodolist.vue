@@ -62,8 +62,8 @@
 
 <script>
 import VTitle from '@components/VTitle.vue'
-import storage from '@tools/storage.js'
-import tools from '@tools/index.js'
+import { getStorage, setStorage } from '@tools/storage.js'
+import { debounce } from '@tools/index.js'
 export default {
   name: 'HomeTodolist',
   components: { VTitle },
@@ -90,44 +90,51 @@ export default {
       set (val) {
         this.datas.forEach(i => i.on = val)
       }
-    },
+    }
   },
   watch: {
-    // 更新本地数据
+    // 更新本地存储
     datas: {
-      handler: tools.debounce(function (datas) {
-        //用箭头函数，拿不到 this
-        storage.set('todolist', { datas, dataid: this.dataid })
-      }, 1000),
+      handler (datas) {
+        this.text = ''
+        this.setStorage(datas)
+      },
       deep: true
     }
   },
   created () {
     // 初始化数据
-    let todolist = storage.get('todolist')
+    let todolist = getStorage('todolist')
     if (todolist) {
       this.dataid = todolist.dataid
       this.datas = todolist.datas
     }
-
   },
   methods: {
+    // 删除一条
     del (index) {
       this.datas.splice(index, 1)
     },
+    // 添加一条
     add (str) {
+      if (str === '') return
       this.datas.unshift({
         id: this.dataid++,
         str,
         on: false
       })
     },
+    // 删除选中
     delOn () {
       let temp = this.datas.length
       while (temp--) {
         this.datas[temp].on && this.del(temp, 1)
       }
-    }
+    },
+    // 更新本地存储
+    setStorage: debounce(function (datas) {
+      setStorage('todolist', { datas, dataid: this.dataid })
+    }, 100)
   }
 }
 </script> 
