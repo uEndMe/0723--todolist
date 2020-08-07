@@ -48,6 +48,7 @@
 
 >> 0807
 * i       tools     工具函数 反遍历，localStorage存取，防抖，节流
+* update  todolist/tools  本地存储数据/更正防抖节流this指向
 
 ```
 

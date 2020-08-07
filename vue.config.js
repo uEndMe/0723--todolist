@@ -19,6 +19,7 @@ module.exports = {
         '@pages': resolve('src/pages'),
         '@router': resolve('src/router'),
         '@store': resolve('src/store'),
+        '@tools': resolve('src/tools'),
       }
     }
   },

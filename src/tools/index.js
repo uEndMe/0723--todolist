@@ -12,7 +12,7 @@ tools.debounce = function (cb, delay) {
   return function (...rest) {
     clearTimeout(id)
     id = setTimeout(() => {
-      cb(...rest)
+      cb.call(this, ...rest)
     }, delay)
   }
 }
@@ -30,7 +30,7 @@ tools.throttle = function (cb, interval) {
     if (!state) return
     state = false
     setTimeout(() => {
-      cb(...rest)
+      cb.call(this, ...rest)
       state = true
     }, interval)
   }

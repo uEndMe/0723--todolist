@@ -62,6 +62,8 @@
 
 <script>
 import VTitle from '@components/VTitle.vue'
+import storage from '@tools/storage.js'
+import tools from '@tools/index.js'
 export default {
   name: 'HomeTodolist',
   components: { VTitle },
@@ -88,9 +90,27 @@ export default {
       set (val) {
         this.datas.forEach(i => i.on = val)
       }
+    },
+  },
+  watch: {
+    // 更新本地数据
+    datas: {
+      handler: tools.debounce(function (datas) {
+        //用箭头函数，拿不到 this
+        storage.set('todolist', { datas, dataid: this.dataid })
+      }, 1000),
+      deep: true
     }
   },
+  created () {
+    // 初始化数据
+    let todolist = storage.get('todolist')
+    if (todolist) {
+      this.dataid = todolist.dataid
+      this.datas = todolist.datas
+    }
 
+  },
   methods: {
     del (index) {
       this.datas.splice(index, 1)
