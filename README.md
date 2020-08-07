@@ -46,12 +46,16 @@
 * i       todolist  完成
 * set     webpack   配置路径别名
 
+>> 0807
+* i       tools     工具函数 反遍历，localStorage存取，防抖，节流
 
 ```
 
 * 待办
 
 ```
+tools 反遍历，localStorage存取，防抖，节流
+* update  todolist  本地存储数据
 优化 stylus 结构
 添加 别名
 

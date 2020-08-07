@@ -90,6 +90,7 @@ export default {
       }
     }
   },
+
   methods: {
     del (index) {
       this.datas.splice(index, 1)
