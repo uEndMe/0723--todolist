@@ -2,16 +2,17 @@
   <div class="page">
     <VTitle />
     <div class="content">
-      slot
+      <SlotA></SlotA>
     </div>
   </div>
 </template>
 
 <script>
 import VTitle from '@components/VTitle.vue'
+import SlotA from './Slot/SlotA'
 export default {
   name: 'HomeSlot',
-  components: { VTitle },
+  components: { VTitle, SlotA },
   data () {
     return {
 

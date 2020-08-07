@@ -4,7 +4,7 @@
     <VFooter :class="['footer',{footerOff}]" />
     <section class="main">
       <VNav :class="['aside',{asideOff}]" />
-      <router-view class="content" />
+      <router-view class="contentModule" />
     </section>
   </div>
 </template>
@@ -96,10 +96,10 @@ export default {
   display flex
   background-color #f4f5f5
 
-.content
+.contentModule
   flex 1
 
-.aside, .content
+.aside, .contentModule
   height 100%
   overflow-y auto
   overflow-x hidden

@@ -52,6 +52,7 @@
 * update  tools     优化模块的引入
 * update  todolist  优化 debounce 的使用
 * i       slot      初始化
+* update  root      优化布局
 
 ```
 
