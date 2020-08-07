@@ -51,6 +51,7 @@
 * update  todolist/tools  本地存储数据/更正防抖节流this指向
 * update  tools     优化模块的引入
 * update  todolist  优化 debounce 的使用
+* i       slot      初始化
 
 ```
 
