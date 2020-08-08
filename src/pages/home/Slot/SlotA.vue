@@ -5,7 +5,9 @@
         slot="header"
         class="clearfix"
       >
-        <span>SlotA</span>
+        <span>
+          <slot />
+        </span>
         <el-button
           style="float: right; padding: 3px 0"
           type="text"

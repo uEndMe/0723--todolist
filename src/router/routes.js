@@ -6,6 +6,7 @@ const
   VHome = () => import('@pages/home/VHome'),
   HomeTodolist = () => import('@pages/home/HomeTodolist'),
   HomeSlot = () => import('@pages/home/HomeSlot'),
+  HomeAxios = () => import('@pages/home/axios/axios'),
   VProduction = () => import('@pages/production/VProduction'),
   VClass = () => import('@pages/class/VClass')
 
@@ -19,6 +20,7 @@ export default [
       { path: '/home', component: VHome },
       { path: '/home/todolist', component: HomeTodolist },
       { path: '/home/slot', component: HomeSlot },
+      { path: '/home/axios', component: HomeAxios },
       { path: '/home/vuex', component: HomeTodolist },
       { path: '/production', component: VProduction },
       { path: '/class', component: VClass },

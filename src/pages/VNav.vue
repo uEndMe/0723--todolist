@@ -49,6 +49,10 @@
           <i class="el-icon-star-on"></i>
           <span slot="title">slot</span>
         </el-menu-item>
+        <el-menu-item index="/home/axios">
+          <i class="el-icon-star-on"></i>
+          <span slot="title">axios</span>
+        </el-menu-item>
         <el-menu-item index="/home/vuex">
           <i class="el-icon-star-on"></i>
           <span slot="title">vuex</span>

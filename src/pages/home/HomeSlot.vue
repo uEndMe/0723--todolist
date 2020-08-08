@@ -2,7 +2,7 @@
   <div class="page">
     <VTitle />
     <div class="content">
-      <SlotA></SlotA>
+      <SlotA>这是插槽提供的接口</SlotA>
     </div>
   </div>
 </template>
