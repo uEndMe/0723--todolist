@@ -1,7 +1,8 @@
 import axios from 'axios'
 // import qs from 'qs'
 
-const baseURL = ""
+let baseURL = "https://api.apiopen.top/getJoke?page=1&count=2&type=video"
+baseURL = "https://api.apiopen.top"
 const myAxios = axios.create({
   baseURL
 })
@@ -22,11 +23,11 @@ let errCode = {
   '403': '禁止访问',
   '404': '资源丢失',
   '500': '系统繁忙',
-  'bug': '未知错误'
+  'bug': '请求失败'   // 没有状态码的响应
 }
 myAxios.interceptors.response.use(ok => ok, error => {
-  // 失败
   const code = error.status || 'bug'
+  console.log(error)
   return errCode[code]
 })
 

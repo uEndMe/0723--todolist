@@ -1,57 +1,59 @@
 <template>
   <div>
     Axios
-    <input
-      type="text"
-      v-model="str"
-    >
-    <button @click="search(str)">发送请求</button>
-    <button @click="xx(str)">发送xx</button>
+
+    <button @click="search(str)">get请求</button>
+    <br>
+    <button @click="xx(str)">post请求</button>
     <button @click="all(str)">发10次</button>
   </div>
 </template>
 
 <script>
-import { search, xx } from '../api/index'
+import { search, xx } from './api/index'
+import { isFulfilled } from '@tools/api'
 const apiSearch = search
 const apixx = xx
 export default {
   name: 'home-axios',
   data () {
     return {
-      str: ''
+      // str: "page=1&count=2&type=video",
+      str: { page: 1, count: 2, type: 'video' },
+      state: { init: true }
     }
   },
   methods: {
-    search (str) {
-      const options = {
-        data: str,
-        pending () {
-          console.log('开始发送请求~')
-        },
-        fulfilled ({ data }) {
-          console.log(data)
-        },
-        reject (err) {
-          console.log(err)
-        }
+    async search (data) {
+      // 发起请求
+      this.state = { loading: true }
+      const res = await apiSearch(data)
+      // 响应结果
+      if (isFulfilled(res)) {
+        this.state = { loaded: true }
+        console.log(res.data)
+      } else {
+        this.state = { err: true }
+        console.log(res)
       }
-      apiSearch(options)
+
     },
-    xx (str) {
-      const options = {
-        data: str,
-        pending () {
-          console.log('开始发送请求~')
-        },
-        fulfilled ({ data }) {
-          console.log(data)
-        },
-        reject (err) {
-          console.log(err)
-        }
+    async xx (data) {
+
+      // 发起请求
+      this.state = { loading: true }
+      const res = await apixx(data)
+
+      // 响应结果
+      this.loading = false
+      if (isFulfilled(res)) {
+        this.state = { loaded: true }
+        console.log(res.data)
+      } else {
+        this.state = { err: true }
+        console.log(res)
       }
-      apixx(options)
+
     },
     all () {
       let i = 10

@@ -53,11 +53,15 @@
 * update  todolist  优化 debounce 的使用
 * i       slot      初始化
 * update  root      优化布局
-* i       axios     初始化
 
+>> 0808
+* i       axios     初始化
 
 >> 0809
 * i       axios     完成：拦截器，模拟生命周期，api调用
+* update  axios     完成
+
+
 ```
 
 * 待办
